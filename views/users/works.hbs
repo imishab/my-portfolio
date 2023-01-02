@@ -1,0 +1,505 @@
+<style>
+  .header-area {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    background-color: #ffffff;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ffffff;
+}
+</style>
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+        <div class="container">
+            <!-- Header Content-->
+            <div class="header-content position-relative d-flex align-items-center justify-content-between">
+                <!-- Back Button-->
+                <div class="back-button"><a href="/"><svg width="32" height="32" viewBox="0 0 16 16"
+                            class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                        </svg></a></div>
+                <!-- Page Title-->
+                <div class="page-heading">
+                    <h6 class="mb-0">My Works</h6>
+                </div>
+                <!-- Settings-->
+                <div class="setting-wrapper"><a class="setting-trigger-btn" id="settingTriggerBtn" href="#"><svg
+                            width="18" height="18" viewBox="0 0 16 16" class="bi bi-gear" fill="url(#gradientSettings)"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient spreadMethod="pad" id="gradientSettings" x1="0%" y1="0%" x2="100%"
+                                    y2="100%">
+                                    <stop offset="0" style="stop-color: #0134d4; stop-opacity:1;" />
+                                    <stop offset="100%" style="stop-color: #28a745; stop-opacity:1;" />
+                                </linearGradient>
+                            </defs>
+                            <path fill-rule="evenodd"
+                                d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
+                            <path fill-rule="evenodd"
+                                d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z" />
+                        </svg><span></span></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-content-wrapper py-3">
+        <div class="container">
+            <!-- Element Heading-->
+            <div class="element-heading">
+                <h6>Gallery</h6>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card image-gallery-card" id="works">
+                <div class="card-body">
+                    <!-- Gallery Menu-->
+                    <div class="gallery-menu">
+                        <button class="active" data-filter="*">All</button>
+                        <button data-filter=".poster">Posters</button>
+                        <button data-filter=".ui">UI/UX</button>
+                        <button data-filter=".logo">Logos</button>
+                    </div>
+                    <!-- Gallery Wrapper-->
+                    <div class="gallery-wrapper row g-3">
+                             <!-- Single Image Gallery-->
+                             <div class="col-6 single-image-gallery ui">
+                                <!-- Gallery Image--><a class="" href="https://www.figma.com/file/Y2Z1JbKY60ALVk6DkIRGZy/Ham-Hub-Project?node-id=0%3A1"
+                                    data-effect="mfp-zoom-in" target="_blank"><img src="assets/img/bg-img/myworks/hum.jpg" alt=""></a>
+                                <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                        viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                    </svg></a>
+                            </div>
+    <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery logo">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/logo2.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/logo2.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+           
+                           <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/c2.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/c2.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                         <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/env2.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/env2.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/maloops env.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/maloops env.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                         <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/cards.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/cards.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        
+                             <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/cr7.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/cr7.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        
+                             <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/eid.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/eid.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery ui">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/hin ui 1.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 1.png" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/mal poster 5.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 5.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/mal poster 2.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 2.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/mal poster 3.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 3.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/poster 1.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/poster 1.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery ui">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/hin ui 4.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 4.png" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery ui">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/hin ui 2.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 2.png" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery ui">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/hin ui 3.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 3.png" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+
+
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/hindustan env.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hindustan env.jpg" alt=""></a>
+
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+
+
+
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/mal poster 4.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 4.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="col-6 single-image-gallery poster">
+                            <!-- Gallery Image--><a class="gallery-img" href="assets/img/bg-img/myworks/mal poster 1.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 1.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Element Heading-->
+            <div class="element-heading mt-3">
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="card image-gallery-card">
+                <div class="card-body">
+                    <div class="row gx-2 align-items-end">
+                        <div class="col-8">
+                            <div class="image-gallery-text mb-4">
+                                <h3 class="mb-0">My recent works</h3>
+                                <p class="mb-0">Latest awesome designs.</p>
+                            </div>
+                        </div>
+                        <div class="col-4 text-end"><a class="btn btn-primary btn-sm mb-4" href="#works">View More</a>
+                        </div>
+                    </div>
+                    <div class="image-gallery-carousel owl-carousel">
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/hin ui 1.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 1.png " alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/hin ui 2.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 2.png" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/hin ui 3.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 3.png" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/hin ui 4.png"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hin ui 4.png" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/hindustan env.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/hindustan env.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/mal poster 1.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 1.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/mal poster 2.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 2.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/mal poster 3.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 3.jpg " alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/mal poster 4.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 4.jpg " alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/mal poster 5.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/mal poster 5.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/maloops env.jpg"
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/maloops env.jpg" alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+                        <!-- Single Image Gallery-->
+                        <div class="single-image-gallery">
+                            <!-- Gallery Image--><a class="gallery-img2" href="assets/img/bg-img/myworks/poster 1.jpg "
+                                data-effect="mfp-zoom-in"><img src="assets/img/bg-img/myworks/poster 1.jpg " alt=""></a>
+                            <!-- Fav Icon--><a class="fav-icon shadow" href="#"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                </svg></a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All JavaScript Files-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery(function () {
+                jQuery(this).bind("contextmenu", function (event) {
+                    event.preventDefault();
+                    alert('You cannot download these images because the owner of this website was disabled the download option!!')
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const obj = document.getElementById("value");
+        animateValue(obj, 0, 100, 3000);
+    </script>

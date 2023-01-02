@@ -1,0 +1,45 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+   }
+body2{
+    background: #fff;
+} */
+span2{
+    
+    
+    transform: translate(-50%,-50%);
+    
+}
+span2::before{
+    content: '';
+    
+   
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation: animate 10s infinite linear;
+}
+@keyframes animate{
+    0%{
+        content: 'UI/UX Designer';
+    }
+    40%{
+       content: 'Web/App Developer';
+    }
+    50%{
+        content: 'Full Stack Developer'; 
+    }
+    70%{
+        content: 'Product Designer';
+    }
+    90%{
+        content: 'Content Designer';
+    }
+    100%{
+        content: 'Photographer';
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Title-->
+  <title>Mishab - Web/App Developer & Designer</title>
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <!-- Core Stylesheet-->
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">Edit Header</h2>
+                <form action="/admin/edit-header/{{header._id}}" enctype="multipart/form-data" method="POST">
+                    <label for="" class="mt-3">Image</label>
+                    <img src="/images/header-images/{{header._id}}.png" alt=""
+                    style="width: 5rem; margin-bottom: 8px;" id="imgView">
+
+                    <input type="file" name="Image" class="form-control" onchange="viewImage(event)">
+                    <label for="" class="mt-3">Name</label>
+                    <input type="text" name="Name" class="form-control" value="{{header.Name}}" required>
+
+                    <label for="" class="mt-3">Sub</label>
+                    <input type="text" name="Sub" class="form-control" value="{{header.Sub}}" required>
+                   <hr>
+                    <label for="" class="mt-3">Button Link</label>
+                    <input type="text" name="Link" class="form-control" value="{{header.Link}}" required>
+                    <label for="" class="mt-3">Button Color</label>
+                    <input type="text" name="Color" class="form-control" value="{{header.Color}}" required>
+                    <label for="" class="mt-3">Button Text</label>
+                    <input type="text" name="Text" class="form-control" value="{{header.Text}}" required>
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/default/active.js"></script>
+  
+<script>
+    function viewImage(event) {
+        document.getElementById("imgView").src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
+</body>
+</html>

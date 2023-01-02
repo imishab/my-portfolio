@@ -1,0 +1,27 @@
+<section>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Add Header</h2>
+                <form action="/admin/add-header" enctype="multipart/form-data" method="POST">
+                    <label for="">Image</label>
+                    <input type="file" name="Image" class="form-control" required>
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" required>
+                    <label for="">Sub Heading</label>
+                    <input type="text" name="Sub" class="form-control" required>
+                    <hr>
+                     <label for="">Button Link</label>
+                    <input type="text" name="Link" class="form-control" required>
+                    <label for="">Button Color</label>
+                    <input type="text" name="Color" class="form-control" required>
+                    <label for="">Button Text</label>
+                    <input type="text" name="Text" class="form-control" required>
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                     <a href="/admin/all-header" type="submit" class="btn btn-danger mt-4">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

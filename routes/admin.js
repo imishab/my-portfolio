@@ -63,6 +63,7 @@ router.get("/signup", function (req, res) {
     res.redirect("/admin");
   } else {
     res.render("admin/signup", {
+      layout: "emptylayout",
       admin: true,
       signUpErr: req.session.signUpErr,
     });
@@ -88,6 +89,7 @@ router.get("/signin", function (req, res) {
     res.redirect("/admin");
   } else {
     res.render("admin/signin", {
+      layout: "emptylayout",
       admin: true,
       signInErr: req.session.signInErr,
     });

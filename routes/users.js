@@ -13,13 +13,11 @@ const verifySignedIn = (req, res, next) => {
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   let user = req.session.user;
-  let cartCount = null;
-  if (user) {
-    let userId = req.session.user._id;
-    cartCount = await userHelper.getCartCount(userId);
-  }
-  userHelper.getAllProducts().then((products) => {
-    res.render("users/home", { admin: false, products, user, cartCount });
+  header = await userHelper.getAllheader();
+  res.render("users/home", {
+    admin: false,
+    user,
+    header,
   });
 });
 

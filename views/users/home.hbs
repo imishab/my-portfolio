@@ -46,8 +46,9 @@
       <!-- Skip Page-->
 
       <!-- Hero Block Content--><br><br>
-      <div class="hero-block-content mt-12"><img class="mb-4" src="images/bg-img/me1.png">
-        <h2 class="display-4 text-white mb-1">I'm Mishab</h2>
+          {{#each header}}
+      <div class="hero-block-content mt-12"><img class="mb-4" src="/images/header-images/{{this._id}}.png">
+        <h2 class="display-4 text-white mb-1">{{this.Name}}</h2>
         <p class="pl-12">
           <font color="white">
             I'm a<br> </font>
@@ -58,10 +59,10 @@
           </font>
 
         </p>
-        <p class="text-white mb-4">I have archived many skills including digital content designing,
-          web/app designing and development and many more... </p><a class="btn btn-danger btn-creative btn-lg w-100"
-          href="#start">Explore More</a>
+        <p class="text-white mb-4">{{this.Sub}}</p><a class="btn btn-{{this.Color}} btn-creative btn-lg w-100"
+          href="{{this.Link}}">{{this.Text}}</a>
       </div>
+          {{/each}}
     </div>
   </div><br>
   <!-- <div class="page-content-wrapper py-3"> -->

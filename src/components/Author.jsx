@@ -44,7 +44,7 @@ export function Author() {
               127.0.0.1
             </SectionHeading>
             <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-              <span className="block text-blue-600">I'am Mishab –</span>Well, now you can call<br></br>a me dev😜
+              <span className="block text-blue-600">I'am Mishab –</span>Well, now you can call<br></br>me a dev😜
             </p>
             <p className="mt-4 text-lg tracking-tight text-slate-700 text-2xl">
               I have archived many skills including digital content designing, web/app designing and development and many more...

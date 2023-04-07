@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import { GridPattern } from '@/components/GridPattern'
 import { SectionHeading } from '@/components/SectionHeading'
-import { Button1 } from '@/components/Button1'
 import authorImage from '@/images/me.png'
 
 function GithubIcon(props) {

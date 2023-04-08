@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
-
+import { motion, AnimatePresence } from 'framer-motion'
 import { GridPattern } from '@/components/GridPattern'
 import { SectionHeading } from '@/components/SectionHeading'
 import authorImage from '@/images/me.png'
@@ -14,7 +13,7 @@ function GithubIcon(props) {
 export function Author() {
   return (
     
-    <section className="flex justify-center items-center h-screen">
+    <section className="flex justify-center items-center h-screen ">
 
     <div className="absolute inset-x-0 bottom-0 top-1/2 text-black [mask-image:linear-gradient(transparent,white)]">
       <GridPattern x="50%" y="100%" />
@@ -22,24 +21,40 @@ export function Author() {
 
     <div className=" mx-auto max-w-4xl pt-16 px-3 mt-40 mb-32 sm:px-6 sm:mt-0 sm:mb-0">
 
-      <div className=" relative h-full bg-transparent before:rounded-3xl before:sm:rounded-6xl  before:absolute before:inset-0  before:border-2 before:hover:bg-transparent before:border-transparent ">
+      <div className=" mb-5 mt-5 sm:mb-0 relative h-full bg-transparent before:rounded-3xl before:sm:rounded-6xl  before:absolute before:inset-0  before:border-2 before:hover:bg-transparent before:border-transparent ">
 
 
 
-        <div className="bg-gray-100 border border-2 border-black pt-px rounded-3xl  md:rounded-6xl transition  shadow-[5px_5px_0px_0px_rgba(0,0,0,90.0)] sm:shadow-[15px_15px_0px_0px_rgba(0,0,0,90.0)]">
+        <div className="bg-gray-100 border border-2 border-black pt-px rounded-3xl  md:rounded-4xl transition  shadow-[5px_5px_0px_0px_rgba(0,0,0,90.0)] sm:shadow-[13px_13px_0px_0px_rgba(0,0,0,90.0)]">
 
 
 
-          <div className="relative mx-auto -mt-16 h-44 w-44 overflow-hidden rounded-full bg-slate-200 md:float-right md:h-64 md:w-64 md:[shape-outside:circle(40%)] lg:mr-20 lg:h-60 lg:w-60">
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}
+ initial={{ scale: 2 }}
+ animate={{ rotate: 0, scale: 1 }}
+ transition={{
+   type: "spring",
+   stiffness: 160,
+   damping: 40
+ }}
+  className="relative mx-auto -mt-16 h-44 w-44 overflow-hidden rounded-full bg-slate-200 md:float-right md:h-64 md:w-64 md:[shape-outside:circle(40%)] lg:mr-20 lg:h-60 lg:w-60">
             <Image
               className="absolute inset-0 h-full w-full object-cover"
               src={authorImage}
               alt=""
               sizes="(min-width: 1024px) 18rem, (min-width: 768px) 16rem, 11rem" />
-          </div>
+          </motion.div>
 
 
-          <div className="mt-0 sm:mt-4 px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-6">
+          <motion.div initial={{ scale: 0 }}
+ animate={{ rotate: 0, scale: 1 }}
+ transition={{
+   type: "spring",
+   stiffness: 260,
+   damping: 40
+ }} className="mt-0 sm:mt-4 px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-6">
+
+
             <SectionHeading number="IP" id="author-title">
               127.0.0.1
             </SectionHeading>
@@ -63,7 +78,7 @@ export function Author() {
 
 <a
   className="group mt-6 mb-0 w-full sm:mb-5 relative rounded-lg  inline-block focus:outline-none focus:ring"
-  href="https://poki.com/"
+  href="https://poki.com/" target="_blank"
 >
   <span
     className="absolute inset-0 translate-x-0 translate-y-0 rounded-lg  bg-blue-400 transition-transform group-hover:translate-y-2 group-hover:translate-x-2"
@@ -75,7 +90,7 @@ export function Author() {
    <center>Let's Have Some Fun?</center>
   </span>
 </a>
-          </div>
+          </motion.div>
         </div>
 
 

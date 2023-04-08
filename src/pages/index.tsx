@@ -4,6 +4,7 @@ import { Author } from '@/components/Author'
 
 
 
+
 export default function Home() {
   return (
 
@@ -15,6 +16,8 @@ export default function Home() {
     </Head>
     <main>
         <Author />
+
+
       </main></>
 
 
